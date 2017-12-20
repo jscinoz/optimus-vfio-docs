@@ -63,6 +63,15 @@
     `xorg-server-1.19.5/dix/dispatch.c:4035: AttachOutputGPU: Assertion \`new->current_master == pScreen`` failed.`
     This suggests that PRIME render offload requires the destination device (the
     one being used as a `Sink Offload` to be the primary Xorg GPU
+* Bumblebee
+  * Attempting to use bumblebee without a GVT device will fail as `bumblebeed`
+    will bail out at startup upon not finding an Intel card
+    * Patching out this check will allow `bumblebeed` to start.
+  * Once `bumblebeed` has started, it is unable to successfully start the
+    secondary X server, as the nvidia card has no outputs and Xorg bails out due
+    to no outputs existing.
+    * Nouveau does **not** support/have the `AllowEmptyInitialConfiguration`
+      option that the proprietary nvidia driver has.
 
 # What will (probably) never work
 * Using the nvidia card in the guest as the sole GPU
