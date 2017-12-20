@@ -57,6 +57,7 @@
 * QXL as primary xorg GPU with GVT/nvidia as secondary
   * QXL-backed modesetting provides only the `Sink Output` capability. `Sink
     Offload` is required for render offloading to a device with `Source Offload`
+    * Maybe QXL could be improved to have the `Sink Offload` capability?
   * Attempting to set up nouveau as the `Source Offload` for the GVT card (which
     has `Sink Offload`) will crash Xorg with the following assertion failure:
     `xorg-server-1.19.5/dix/dispatch.c:4035: AttachOutputGPU: Assertion \`new->current_master == pScreen`` failed.`
