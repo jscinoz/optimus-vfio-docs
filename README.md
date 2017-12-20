@@ -55,13 +55,13 @@
     * Next step may be to try with Qemu's emulated `intel-iommu` device and see
       if this helps
 * QXL as primary xorg GPU with GVT/nvidia as secondary
-  * QXL-backed modesetting provides only the "Sink Output" capability. "Sink
-    Offload" is required for render offloading to a device with "Source Offload"
-  * Attempting to set up nouveau as the "Source Offload" for the GVT card (which
-    has "Sink Offload") will crash Xorg with the following assertion failure:
+  * QXL-backed modesetting provides only the `Sink Output` capability. `Sink
+    Offload` is required for render offloading to a device with `Source Offload`
+  * Attempting to set up nouveau as the `Source Offload` for the GVT card (which
+    has `Sink Offload`) will crash Xorg with the following assertion failure:
     `xorg-server-1.19.5/dix/dispatch.c:4035: AttachOutputGPU: Assertion \`new->current_master == pScreen`` failed.`
     This suggests that PRIME render offload requires the destination device (the
-    one being used as a "Sink Offload" to be the primary Xorg GPU
+    one being used as a `Sink Offload` to be the primary Xorg GPU
 
 # What will (probably) never work
 * Using the nvidia card in the guest as the sole GPU
