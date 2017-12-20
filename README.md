@@ -1,5 +1,7 @@
 # What works
 * Compute workloads (via render nodes) on GVT device
+  * You can find a sample program that dispatches a compute shader via render
+    nodes [here](https://github.com/elima/gpu-playground/tree/master/render-nodes-minimal)
 * Compute workloads (via render nodes) on nvidia card (nouveau)
 * Render workloads on the nvidia card with the nouveau driver, with a GVT device
   as the guest's primary GPU
