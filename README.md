@@ -79,6 +79,9 @@
     no outputs available
   * xf86-video-dummy cannot be used as the primary GPU as it lacks PRIME support
 
+# What's untested
+* Wayland
+
 # What's needed
 * A way to obtain a dump of nvidia VBIOS under Linux
 * Custom ACPI tables embedding nvidia VBIOS and exposing it via the `_ROM`
