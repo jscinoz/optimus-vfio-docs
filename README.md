@@ -11,8 +11,11 @@
   * Nvidia VBIOS must be provided to the guest via libvirt's `<rom file=...>` /
     qemu's `romfile` option on the device
     * VBIOS can be obtained by dumping the system firmware with
-      "Universal Bios Backup Toolkit" and using MMTool to extract the VBIOS from
-      the "Option ROMs" section
+      [Universal Bios Backup Toolkit](https://forums.mydigitallife.net/threads/universal-bios-backup-toolkit.9856/)
+      and using MMTool to extract the VBIOS fromthe "Option ROMs" section
+      * This needs to be done under bare-metal Windows. I use a Windows-To-Go
+        install of Server 2016 on a USB (UAS) SSD for this, to leave my
+        machine's internal storage alone.
   * Guest must be OVMF/EFI
   * Guest kernel must booted via OVMF directly, or via a bootloader that
     supports the EFI handover protocol
