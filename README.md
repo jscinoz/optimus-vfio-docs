@@ -60,7 +60,7 @@
     * Maybe QXL could be improved to have the `Sink Offload` capability?
   * Attempting to set up nouveau as the `Source Offload` for the GVT card (which
     has `Sink Offload`) will crash Xorg with the following assertion failure:
-    `xorg-server-1.19.5/dix/dispatch.c:4035: AttachOutputGPU: Assertion \`new->current_master == pScreen`` failed.`
+    `xorg-server-1.19.5/dix/dispatch.c:4035: AttachOutputGPU: Assertion 'new->current_master == pScreen' failed.`
     This suggests that PRIME render offload requires the destination device (the
     one being used as a `Sink Offload` to be the primary Xorg GPU
 * Bumblebee
