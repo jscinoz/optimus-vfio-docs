@@ -46,8 +46,8 @@
     successfully, and modes will show as available on the newly created
     Virtual-X-Y output (where X and Y will vary depending on your xorg server's
     layout)
-  * Attempting to set any mode on the Virtual-X-Y will fail with the following
-    errors from the kernel:
+  * Attempting to set any mode on the Virtual-X-Y output will fail with the
+   following errors from the kernel:
     ```
     qxl 0000:00:03.0: swiotlb buffer is full (sz: 299008 bytes)
     qxl 0000:00:03.0: DMA: Out of SW-IOMMU space for 299008 bytes
