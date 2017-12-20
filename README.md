@@ -15,7 +15,7 @@
   * Guest kernel must booted via OVMF directly, or via a bootloader that
     supports the EFI handover protocol
     * Failure to do this will result in nouveau failing to load vbios via the
-      FIRMWARE interface
+      `FIRMWARE` interface
     * Mainline GRUB **does not** have EFI handover support. Fedora (and maybe
       other distros) have their own patches adding support for this in the form
       of the `linuxefi` command
