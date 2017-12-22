@@ -10,6 +10,7 @@ information that should be current (and hopefully accurate)
 
 
 TODO:
+* Try binary nvidia + QXL (no gvt)
 * Upload various xorg.confs
 * Try with git kernel
 * Try with gvt bleeding edge kernel
