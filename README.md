@@ -1,4 +1,3 @@
-## Read me first
 All that follows is relating to muxless/non-MXM Optimus cards, i.e. those that
 have no display outputs and show as `3D Controller` in `lspci` output. If you
 have a MXM / output-providing card (shows as `VGA Controller` in `lspci`), then
