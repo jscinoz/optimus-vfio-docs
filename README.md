@@ -16,7 +16,8 @@
       * This needs to be done under bare-metal Windows. I use a Windows-To-Go
         install of Server 2016 on a USB (UAS) SSD for this, to leave my
         machine's internal storage alone.
-  * Guest must be OVMF/EFI
+  * I've only tested this with OVMF/UEFI. It may or may not work with seabios
+    VMs
   * Guest kernel must booted via OVMF directly, or via a bootloader that
     supports the EFI handover protocol
     * Failure to do this will result in nouveau failing to load vbios via the
