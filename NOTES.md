@@ -10,6 +10,7 @@ information that should be current (and hopefully accurate)
 
 
 TODO:
+* Upload various xorg.confs
 * Try with git kernel
 * Try with gvt bleeding edge kernel
 * Try using qxl + gvt (without nvidia) to debug qxl reverse prime
