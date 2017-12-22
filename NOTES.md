@@ -10,6 +10,8 @@ information that should be current (and hopefully accurate)
 
 
 TODO:
+* Try with git kernel
+* Try with gvt bleeding edge kernel
 * Try using qxl + gvt (without nvidia) to debug qxl reverse prime
 * Experiment with qemu emulated intel_iommu to see if that resolves the swiotlb
   issue
