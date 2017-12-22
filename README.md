@@ -18,6 +18,14 @@
         machine's internal storage alone.
   * I've only tested this with OVMF/UEFI. It may or may not work with seabios
     VMs
+  * My dumped VBIOS did **not** have EFI support, but I don't think that is
+    necessary when the card has no outputs. rom-parser output for reference:
+    ```
+Valid ROM signature found @0h, PCIR offset 190h
+	PCIR: type 0, vendor: 10de, device: 139b, class: 030200
+	PCIR: revision 3, vendor revision: 1
+	Last image
+    ```
   * Guest kernel must booted via OVMF directly, or via a bootloader that
     supports the EFI handover protocol
     * Failure to do this will result in nouveau failing to load vbios via the
