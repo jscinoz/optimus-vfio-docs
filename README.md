@@ -1,8 +1,9 @@
-*All that follows is relating to muxless/non-MXM Optimus cards, i.e. those that
+## Read me first
+All that follows is relating to muxless/non-MXM Optimus cards, i.e. those that
 have no display outputs and show as `3D Controller` in `lspci` output. If you
 have a MXM / output-providing card (shows as `VGA Controller` in `lspci`), then
 this is not for you. For such devices, see
-[@Misairu-G's guide](https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28)*
+[@Misairu-G's guide](https://gist.github.com/Misairu-G/616f7b2756c488148b7309addc940b28)
 
 # What works
 * Compute workloads (via render nodes) on GVT device
