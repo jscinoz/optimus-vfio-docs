@@ -25,13 +25,17 @@
       other distros) have their own patches adding support for this in the form
       of the `linuxefi` command
   * No local display output at present; remote display must be used.
+* Render workloads on the nvidia card with the nvidia driver, with the GVT
+  device as secondary, linked with PRIME
+  * Requires a patch to the nvidia driver to fake loading VBIOS from ACPI. See
+    below
 * Render workloads on the GVT device, with the GVT device as the guest's primary
   GPU
   * Only tested on q35 + OVMF
   * No VBIOS needed, everything should Just Work™
   * No local display output at present; remote display must be used.
 
-# What doesn't work (yet)
+# What works, with patching
 * Binary nvidia driver (Linux)
   * For Optimus cards, it will only attempt to load VBIOS via ACPI \_ROM method,
     which won't exist in the guest.
@@ -45,6 +49,8 @@
     `-acpitable` option) that has `_ROM` implemented at the correct path. The
     `_ROM` implementationm would need to seek over a hard-coded buffer stored
     elsewhere and return the VBIOS in 4kb chunks as expected by nvidia driver
+
+# What doesn't work (yet)
 * Windows guest
   * Will need custom ACPI table to get VBIOS, as detailed above
 * Reverse PRIME to mirror GVT display to QXL device to use Qemu's built in spice
