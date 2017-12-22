@@ -37,6 +37,10 @@
     which won't exist in the guest.
   * We can probably patch `nv_acpi_rom_method` in `kernel/nvidia/nv-acpi.c` to
     simply return our VBIOS from a hard-coded buffer, just for testing
+    * **[UPDATE]** I tested this and it worked, the binary driver booted and the
+      NVIDIA card can be set up with PRIME. [glxinfo](glxinfo-nvidia-guest),
+			[patch](nvidia-firmware-hack.patch). Note you'll need to dump your own VBIOS and
+			inline it in the patch.
   * Long term we need to build a custom ACPI table (provided to qemu with the
     `-acpitable` option) that has `_ROM` implemented at the correct path. The
     `_ROM` implementationm would need to seek over a hard-coded buffer stored

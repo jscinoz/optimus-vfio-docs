@@ -1,0 +1,784 @@
+name of display: :0
+display: :0  screen: 0
+direct rendering: Yes
+server glx vendor string: NVIDIA Corporation
+server glx version string: 1.4
+server glx extensions:
+    GLX_ARB_context_flush_control, GLX_ARB_create_context,
+    GLX_ARB_create_context_no_error, GLX_ARB_create_context_profile,
+    GLX_ARB_create_context_robustness, GLX_ARB_fbconfig_float,
+    GLX_ARB_multisample, GLX_EXT_buffer_age,
+    GLX_EXT_create_context_es2_profile, GLX_EXT_create_context_es_profile,
+    GLX_EXT_framebuffer_sRGB, GLX_EXT_import_context, GLX_EXT_libglvnd,
+    GLX_EXT_stereo_tree, GLX_EXT_swap_control, GLX_EXT_swap_control_tear,
+    GLX_EXT_texture_from_pixmap, GLX_EXT_visual_info, GLX_EXT_visual_rating,
+    GLX_NV_copy_image, GLX_NV_delay_before_swap, GLX_NV_float_buffer,
+    GLX_NV_robustness_video_memory_purge, GLX_SGIX_fbconfig, GLX_SGIX_pbuffer,
+    GLX_SGI_swap_control, GLX_SGI_video_sync
+client glx vendor string: NVIDIA Corporation
+client glx version string: 1.4
+client glx extensions:
+    GLX_ARB_context_flush_control, GLX_ARB_create_context,
+    GLX_ARB_create_context_no_error, GLX_ARB_create_context_profile,
+    GLX_ARB_create_context_robustness, GLX_ARB_fbconfig_float,
+    GLX_ARB_get_proc_address, GLX_ARB_multisample, GLX_EXT_buffer_age,
+    GLX_EXT_create_context_es2_profile, GLX_EXT_create_context_es_profile,
+    GLX_EXT_fbconfig_packed_float, GLX_EXT_framebuffer_sRGB,
+    GLX_EXT_import_context, GLX_EXT_stereo_tree, GLX_EXT_swap_control,
+    GLX_EXT_swap_control_tear, GLX_EXT_texture_from_pixmap,
+    GLX_EXT_visual_info, GLX_EXT_visual_rating, GLX_NV_copy_buffer,
+    GLX_NV_copy_image, GLX_NV_delay_before_swap, GLX_NV_float_buffer,
+    GLX_NV_multisample_coverage, GLX_NV_present_video,
+    GLX_NV_robustness_video_memory_purge, GLX_NV_swap_group,
+    GLX_NV_video_capture, GLX_NV_video_out, GLX_SGIX_fbconfig,
+    GLX_SGIX_pbuffer, GLX_SGI_swap_control, GLX_SGI_video_sync
+GLX version: 1.4
+GLX extensions:
+    GLX_ARB_context_flush_control, GLX_ARB_create_context,
+    GLX_ARB_create_context_no_error, GLX_ARB_create_context_profile,
+    GLX_ARB_create_context_robustness, GLX_ARB_fbconfig_float,
+    GLX_ARB_get_proc_address, GLX_ARB_multisample, GLX_EXT_buffer_age,
+    GLX_EXT_create_context_es2_profile, GLX_EXT_create_context_es_profile,
+    GLX_EXT_framebuffer_sRGB, GLX_EXT_import_context, GLX_EXT_stereo_tree,
+    GLX_EXT_swap_control, GLX_EXT_swap_control_tear,
+    GLX_EXT_texture_from_pixmap, GLX_EXT_visual_info, GLX_EXT_visual_rating,
+    GLX_NV_copy_image, GLX_NV_delay_before_swap, GLX_NV_float_buffer,
+    GLX_NV_robustness_video_memory_purge, GLX_SGIX_fbconfig, GLX_SGIX_pbuffer,
+    GLX_SGI_swap_control, GLX_SGI_video_sync
+OpenGL vendor string: NVIDIA Corporation
+OpenGL renderer string: GeForce GTX 960M/PCIe/SSE2
+OpenGL core profile version string: 4.5.0 NVIDIA 387.34
+OpenGL core profile shading language version string: 4.50 NVIDIA
+OpenGL core profile context flags: (none)
+OpenGL core profile profile mask: core profile
+OpenGL core profile extensions:
+    GL_AMD_multi_draw_indirect, GL_AMD_seamless_cubemap_per_texture,
+    GL_ARB_ES2_compatibility, GL_ARB_ES3_1_compatibility,
+    GL_ARB_ES3_2_compatibility, GL_ARB_ES3_compatibility,
+    GL_ARB_arrays_of_arrays, GL_ARB_base_instance, GL_ARB_bindless_texture,
+    GL_ARB_blend_func_extended, GL_ARB_buffer_storage,
+    GL_ARB_clear_buffer_object, GL_ARB_clear_texture, GL_ARB_clip_control,
+    GL_ARB_color_buffer_float, GL_ARB_compressed_texture_pixel_storage,
+    GL_ARB_compute_shader, GL_ARB_compute_variable_group_size,
+    GL_ARB_conditional_render_inverted, GL_ARB_conservative_depth,
+    GL_ARB_copy_buffer, GL_ARB_copy_image, GL_ARB_cull_distance,
+    GL_ARB_debug_output, GL_ARB_depth_buffer_float, GL_ARB_depth_clamp,
+    GL_ARB_depth_texture, GL_ARB_derivative_control,
+    GL_ARB_direct_state_access, GL_ARB_draw_buffers,
+    GL_ARB_draw_buffers_blend, GL_ARB_draw_elements_base_vertex,
+    GL_ARB_draw_indirect, GL_ARB_draw_instanced, GL_ARB_enhanced_layouts,
+    GL_ARB_explicit_attrib_location, GL_ARB_explicit_uniform_location,
+    GL_ARB_fragment_coord_conventions, GL_ARB_fragment_layer_viewport,
+    GL_ARB_fragment_program, GL_ARB_fragment_program_shadow,
+    GL_ARB_fragment_shader, GL_ARB_framebuffer_no_attachments,
+    GL_ARB_framebuffer_object, GL_ARB_framebuffer_sRGB,
+    GL_ARB_geometry_shader4, GL_ARB_get_program_binary,
+    GL_ARB_get_texture_sub_image, GL_ARB_gl_spirv, GL_ARB_gpu_shader5,
+    GL_ARB_gpu_shader_fp64, GL_ARB_gpu_shader_int64, GL_ARB_half_float_pixel,
+    GL_ARB_half_float_vertex, GL_ARB_imaging, GL_ARB_indirect_parameters,
+    GL_ARB_instanced_arrays, GL_ARB_internalformat_query,
+    GL_ARB_internalformat_query2, GL_ARB_invalidate_subdata,
+    GL_ARB_map_buffer_alignment, GL_ARB_map_buffer_range, GL_ARB_multi_bind,
+    GL_ARB_multi_draw_indirect, GL_ARB_multisample, GL_ARB_multitexture,
+    GL_ARB_occlusion_query, GL_ARB_occlusion_query2,
+    GL_ARB_parallel_shader_compile, GL_ARB_pipeline_statistics_query,
+    GL_ARB_pixel_buffer_object, GL_ARB_point_parameters, GL_ARB_point_sprite,
+    GL_ARB_polygon_offset_clamp, GL_ARB_program_interface_query,
+    GL_ARB_provoking_vertex, GL_ARB_query_buffer_object,
+    GL_ARB_robust_buffer_access_behavior, GL_ARB_robustness,
+    GL_ARB_sample_shading, GL_ARB_sampler_objects, GL_ARB_seamless_cube_map,
+    GL_ARB_seamless_cubemap_per_texture, GL_ARB_separate_shader_objects,
+    GL_ARB_shader_atomic_counter_ops, GL_ARB_shader_atomic_counters,
+    GL_ARB_shader_ballot, GL_ARB_shader_bit_encoding, GL_ARB_shader_clock,
+    GL_ARB_shader_draw_parameters, GL_ARB_shader_group_vote,
+    GL_ARB_shader_image_load_store, GL_ARB_shader_image_size,
+    GL_ARB_shader_objects, GL_ARB_shader_precision,
+    GL_ARB_shader_storage_buffer_object, GL_ARB_shader_subroutine,
+    GL_ARB_shader_texture_image_samples, GL_ARB_shader_texture_lod,
+    GL_ARB_shading_language_100, GL_ARB_shading_language_420pack,
+    GL_ARB_shading_language_include, GL_ARB_shading_language_packing,
+    GL_ARB_shadow, GL_ARB_sparse_buffer, GL_ARB_sparse_texture,
+    GL_ARB_spirv_extensions, GL_ARB_stencil_texturing, GL_ARB_sync,
+    GL_ARB_tessellation_shader, GL_ARB_texture_barrier,
+    GL_ARB_texture_border_clamp, GL_ARB_texture_buffer_object,
+    GL_ARB_texture_buffer_object_rgb32, GL_ARB_texture_buffer_range,
+    GL_ARB_texture_compression, GL_ARB_texture_compression_bptc,
+    GL_ARB_texture_compression_rgtc, GL_ARB_texture_cube_map,
+    GL_ARB_texture_cube_map_array, GL_ARB_texture_env_add,
+    GL_ARB_texture_env_combine, GL_ARB_texture_env_crossbar,
+    GL_ARB_texture_env_dot3, GL_ARB_texture_filter_anisotropic,
+    GL_ARB_texture_float, GL_ARB_texture_gather,
+    GL_ARB_texture_mirror_clamp_to_edge, GL_ARB_texture_mirrored_repeat,
+    GL_ARB_texture_multisample, GL_ARB_texture_non_power_of_two,
+    GL_ARB_texture_query_levels, GL_ARB_texture_query_lod,
+    GL_ARB_texture_rectangle, GL_ARB_texture_rg, GL_ARB_texture_rgb10_a2ui,
+    GL_ARB_texture_stencil8, GL_ARB_texture_storage,
+    GL_ARB_texture_storage_multisample, GL_ARB_texture_swizzle,
+    GL_ARB_texture_view, GL_ARB_timer_query, GL_ARB_transform_feedback2,
+    GL_ARB_transform_feedback3, GL_ARB_transform_feedback_instanced,
+    GL_ARB_transform_feedback_overflow_query, GL_ARB_transpose_matrix,
+    GL_ARB_uniform_buffer_object, GL_ARB_vertex_array_bgra,
+    GL_ARB_vertex_array_object, GL_ARB_vertex_attrib_64bit,
+    GL_ARB_vertex_attrib_binding, GL_ARB_vertex_buffer_object,
+    GL_ARB_vertex_program, GL_ARB_vertex_shader,
+    GL_ARB_vertex_type_10f_11f_11f_rev, GL_ARB_vertex_type_2_10_10_10_rev,
+    GL_ARB_viewport_array, GL_ARB_window_pos, GL_ATI_draw_buffers,
+    GL_ATI_texture_float, GL_ATI_texture_mirror_once,
+    GL_EXTX_framebuffer_mixed_formats, GL_EXT_Cg_shader, GL_EXT_abgr,
+    GL_EXT_bgra, GL_EXT_bindable_uniform, GL_EXT_blend_color,
+    GL_EXT_blend_equation_separate, GL_EXT_blend_func_separate,
+    GL_EXT_blend_minmax, GL_EXT_blend_subtract, GL_EXT_compiled_vertex_array,
+    GL_EXT_depth_bounds_test, GL_EXT_direct_state_access,
+    GL_EXT_draw_buffers2, GL_EXT_draw_instanced, GL_EXT_draw_range_elements,
+    GL_EXT_fog_coord, GL_EXT_framebuffer_blit, GL_EXT_framebuffer_multisample,
+    GL_EXT_framebuffer_multisample_blit_scaled, GL_EXT_framebuffer_object,
+    GL_EXT_framebuffer_sRGB, GL_EXT_geometry_shader4,
+    GL_EXT_gpu_program_parameters, GL_EXT_gpu_shader4,
+    GL_EXT_import_sync_object, GL_EXT_memory_object, GL_EXT_memory_object_fd,
+    GL_EXT_multi_draw_arrays, GL_EXT_packed_depth_stencil,
+    GL_EXT_packed_float, GL_EXT_packed_pixels, GL_EXT_pixel_buffer_object,
+    GL_EXT_point_parameters, GL_EXT_polygon_offset_clamp,
+    GL_EXT_provoking_vertex, GL_EXT_rescale_normal, GL_EXT_secondary_color,
+    GL_EXT_semaphore, GL_EXT_semaphore_fd, GL_EXT_separate_shader_objects,
+    GL_EXT_separate_specular_color, GL_EXT_shader_image_load_formatted,
+    GL_EXT_shader_image_load_store, GL_EXT_shader_integer_mix,
+    GL_EXT_shadow_funcs, GL_EXT_stencil_two_side, GL_EXT_stencil_wrap,
+    GL_EXT_texture3D, GL_EXT_texture_array, GL_EXT_texture_buffer_object,
+    GL_EXT_texture_compression_dxt1, GL_EXT_texture_compression_latc,
+    GL_EXT_texture_compression_rgtc, GL_EXT_texture_compression_s3tc,
+    GL_EXT_texture_cube_map, GL_EXT_texture_edge_clamp,
+    GL_EXT_texture_env_add, GL_EXT_texture_env_combine,
+    GL_EXT_texture_env_dot3, GL_EXT_texture_filter_anisotropic,
+    GL_EXT_texture_integer, GL_EXT_texture_lod, GL_EXT_texture_lod_bias,
+    GL_EXT_texture_mirror_clamp, GL_EXT_texture_object, GL_EXT_texture_sRGB,
+    GL_EXT_texture_sRGB_decode, GL_EXT_texture_shared_exponent,
+    GL_EXT_texture_storage, GL_EXT_texture_swizzle, GL_EXT_timer_query,
+    GL_EXT_transform_feedback2, GL_EXT_vertex_array, GL_EXT_vertex_array_bgra,
+    GL_EXT_vertex_attrib_64bit, GL_EXT_window_rectangles,
+    GL_EXT_x11_sync_object, GL_IBM_rasterpos_clip,
+    GL_IBM_texture_mirrored_repeat, GL_KHR_blend_equation_advanced,
+    GL_KHR_blend_equation_advanced_coherent, GL_KHR_context_flush_control,
+    GL_KHR_debug, GL_KHR_no_error, GL_KHR_parallel_shader_compile,
+    GL_KHR_robust_buffer_access_behavior, GL_KHR_robustness,
+    GL_KTX_buffer_region, GL_NVX_conditional_render, GL_NVX_gpu_memory_info,
+    GL_NVX_nvenc_interop, GL_NV_ES1_1_compatibility,
+    GL_NV_ES3_1_compatibility, GL_NV_alpha_to_coverage_dither_control,
+    GL_NV_bindless_multi_draw_indirect,
+    GL_NV_bindless_multi_draw_indirect_count, GL_NV_bindless_texture,
+    GL_NV_blend_equation_advanced, GL_NV_blend_equation_advanced_coherent,
+    GL_NV_blend_minmax_factor, GL_NV_blend_square, GL_NV_command_list,
+    GL_NV_compute_program5, GL_NV_conditional_render,
+    GL_NV_copy_depth_to_color, GL_NV_copy_image, GL_NV_depth_buffer_float,
+    GL_NV_depth_clamp, GL_NV_draw_texture, GL_NV_draw_vulkan_image,
+    GL_NV_explicit_multisample, GL_NV_fence, GL_NV_float_buffer,
+    GL_NV_fog_distance, GL_NV_fragment_program, GL_NV_fragment_program2,
+    GL_NV_fragment_program_option, GL_NV_framebuffer_multisample_coverage,
+    GL_NV_geometry_shader4, GL_NV_gpu_program4, GL_NV_gpu_program4_1,
+    GL_NV_gpu_program5, GL_NV_gpu_program5_mem_extended,
+    GL_NV_gpu_program_fp64, GL_NV_gpu_shader5, GL_NV_half_float,
+    GL_NV_internalformat_sample_query, GL_NV_light_max_exponent,
+    GL_NV_multisample_coverage, GL_NV_multisample_filter_hint,
+    GL_NV_occlusion_query, GL_NV_packed_depth_stencil,
+    GL_NV_parameter_buffer_object, GL_NV_parameter_buffer_object2,
+    GL_NV_path_rendering, GL_NV_pixel_data_range, GL_NV_point_sprite,
+    GL_NV_primitive_restart, GL_NV_query_resource, GL_NV_query_resource_tag,
+    GL_NV_register_combiners, GL_NV_register_combiners2,
+    GL_NV_robustness_video_memory_purge, GL_NV_shader_atomic_counters,
+    GL_NV_shader_atomic_float, GL_NV_shader_atomic_int64,
+    GL_NV_shader_buffer_load, GL_NV_shader_storage_buffer_object,
+    GL_NV_shader_thread_group, GL_NV_shader_thread_shuffle,
+    GL_NV_texgen_reflection, GL_NV_texture_barrier,
+    GL_NV_texture_compression_vtc, GL_NV_texture_env_combine4,
+    GL_NV_texture_multisample, GL_NV_texture_rectangle,
+    GL_NV_texture_rectangle_compressed, GL_NV_texture_shader,
+    GL_NV_texture_shader2, GL_NV_texture_shader3, GL_NV_transform_feedback,
+    GL_NV_transform_feedback2, GL_NV_uniform_buffer_unified_memory,
+    GL_NV_vdpau_interop, GL_NV_vertex_array_range, GL_NV_vertex_array_range2,
+    GL_NV_vertex_attrib_integer_64bit, GL_NV_vertex_buffer_unified_memory,
+    GL_NV_vertex_program, GL_NV_vertex_program1_1, GL_NV_vertex_program2,
+    GL_NV_vertex_program2_option, GL_NV_vertex_program3, GL_S3_s3tc,
+    GL_SGIS_generate_mipmap, GL_SGIS_texture_lod, GL_SGIX_depth_texture,
+    GL_SGIX_shadow, GL_SUN_slice_accum
+
+OpenGL version string: 4.6.0 NVIDIA 387.34
+OpenGL shading language version string: 4.60 NVIDIA
+OpenGL context flags: (none)
+OpenGL profile mask: (none)
+OpenGL extensions:
+    GL_AMD_multi_draw_indirect, GL_AMD_seamless_cubemap_per_texture,
+    GL_ARB_ES2_compatibility, GL_ARB_ES3_1_compatibility,
+    GL_ARB_ES3_2_compatibility, GL_ARB_ES3_compatibility,
+    GL_ARB_arrays_of_arrays, GL_ARB_base_instance, GL_ARB_bindless_texture,
+    GL_ARB_blend_func_extended, GL_ARB_buffer_storage,
+    GL_ARB_clear_buffer_object, GL_ARB_clear_texture, GL_ARB_clip_control,
+    GL_ARB_color_buffer_float, GL_ARB_compatibility,
+    GL_ARB_compressed_texture_pixel_storage, GL_ARB_compute_shader,
+    GL_ARB_compute_variable_group_size, GL_ARB_conditional_render_inverted,
+    GL_ARB_conservative_depth, GL_ARB_copy_buffer, GL_ARB_copy_image,
+    GL_ARB_cull_distance, GL_ARB_debug_output, GL_ARB_depth_buffer_float,
+    GL_ARB_depth_clamp, GL_ARB_depth_texture, GL_ARB_derivative_control,
+    GL_ARB_direct_state_access, GL_ARB_draw_buffers,
+    GL_ARB_draw_buffers_blend, GL_ARB_draw_elements_base_vertex,
+    GL_ARB_draw_indirect, GL_ARB_draw_instanced, GL_ARB_enhanced_layouts,
+    GL_ARB_explicit_attrib_location, GL_ARB_explicit_uniform_location,
+    GL_ARB_fragment_coord_conventions, GL_ARB_fragment_layer_viewport,
+    GL_ARB_fragment_program, GL_ARB_fragment_program_shadow,
+    GL_ARB_fragment_shader, GL_ARB_framebuffer_no_attachments,
+    GL_ARB_framebuffer_object, GL_ARB_framebuffer_sRGB,
+    GL_ARB_geometry_shader4, GL_ARB_get_program_binary,
+    GL_ARB_get_texture_sub_image, GL_ARB_gl_spirv, GL_ARB_gpu_shader5,
+    GL_ARB_gpu_shader_fp64, GL_ARB_gpu_shader_int64, GL_ARB_half_float_pixel,
+    GL_ARB_half_float_vertex, GL_ARB_imaging, GL_ARB_indirect_parameters,
+    GL_ARB_instanced_arrays, GL_ARB_internalformat_query,
+    GL_ARB_internalformat_query2, GL_ARB_invalidate_subdata,
+    GL_ARB_map_buffer_alignment, GL_ARB_map_buffer_range, GL_ARB_multi_bind,
+    GL_ARB_multi_draw_indirect, GL_ARB_multisample, GL_ARB_multitexture,
+    GL_ARB_occlusion_query, GL_ARB_occlusion_query2,
+    GL_ARB_parallel_shader_compile, GL_ARB_pipeline_statistics_query,
+    GL_ARB_pixel_buffer_object, GL_ARB_point_parameters, GL_ARB_point_sprite,
+    GL_ARB_polygon_offset_clamp, GL_ARB_program_interface_query,
+    GL_ARB_provoking_vertex, GL_ARB_query_buffer_object,
+    GL_ARB_robust_buffer_access_behavior, GL_ARB_robustness,
+    GL_ARB_sample_shading, GL_ARB_sampler_objects, GL_ARB_seamless_cube_map,
+    GL_ARB_seamless_cubemap_per_texture, GL_ARB_separate_shader_objects,
+    GL_ARB_shader_atomic_counter_ops, GL_ARB_shader_atomic_counters,
+    GL_ARB_shader_ballot, GL_ARB_shader_bit_encoding, GL_ARB_shader_clock,
+    GL_ARB_shader_draw_parameters, GL_ARB_shader_group_vote,
+    GL_ARB_shader_image_load_store, GL_ARB_shader_image_size,
+    GL_ARB_shader_objects, GL_ARB_shader_precision,
+    GL_ARB_shader_storage_buffer_object, GL_ARB_shader_subroutine,
+    GL_ARB_shader_texture_image_samples, GL_ARB_shader_texture_lod,
+    GL_ARB_shading_language_100, GL_ARB_shading_language_420pack,
+    GL_ARB_shading_language_include, GL_ARB_shading_language_packing,
+    GL_ARB_shadow, GL_ARB_sparse_buffer, GL_ARB_sparse_texture,
+    GL_ARB_spirv_extensions, GL_ARB_stencil_texturing, GL_ARB_sync,
+    GL_ARB_tessellation_shader, GL_ARB_texture_barrier,
+    GL_ARB_texture_border_clamp, GL_ARB_texture_buffer_object,
+    GL_ARB_texture_buffer_object_rgb32, GL_ARB_texture_buffer_range,
+    GL_ARB_texture_compression, GL_ARB_texture_compression_bptc,
+    GL_ARB_texture_compression_rgtc, GL_ARB_texture_cube_map,
+    GL_ARB_texture_cube_map_array, GL_ARB_texture_env_add,
+    GL_ARB_texture_env_combine, GL_ARB_texture_env_crossbar,
+    GL_ARB_texture_env_dot3, GL_ARB_texture_filter_anisotropic,
+    GL_ARB_texture_float, GL_ARB_texture_gather,
+    GL_ARB_texture_mirror_clamp_to_edge, GL_ARB_texture_mirrored_repeat,
+    GL_ARB_texture_multisample, GL_ARB_texture_non_power_of_two,
+    GL_ARB_texture_query_levels, GL_ARB_texture_query_lod,
+    GL_ARB_texture_rectangle, GL_ARB_texture_rg, GL_ARB_texture_rgb10_a2ui,
+    GL_ARB_texture_stencil8, GL_ARB_texture_storage,
+    GL_ARB_texture_storage_multisample, GL_ARB_texture_swizzle,
+    GL_ARB_texture_view, GL_ARB_timer_query, GL_ARB_transform_feedback2,
+    GL_ARB_transform_feedback3, GL_ARB_transform_feedback_instanced,
+    GL_ARB_transform_feedback_overflow_query, GL_ARB_transpose_matrix,
+    GL_ARB_uniform_buffer_object, GL_ARB_vertex_array_bgra,
+    GL_ARB_vertex_array_object, GL_ARB_vertex_attrib_64bit,
+    GL_ARB_vertex_attrib_binding, GL_ARB_vertex_buffer_object,
+    GL_ARB_vertex_program, GL_ARB_vertex_shader,
+    GL_ARB_vertex_type_10f_11f_11f_rev, GL_ARB_vertex_type_2_10_10_10_rev,
+    GL_ARB_viewport_array, GL_ARB_window_pos, GL_ATI_draw_buffers,
+    GL_ATI_texture_float, GL_ATI_texture_mirror_once,
+    GL_EXTX_framebuffer_mixed_formats, GL_EXT_Cg_shader, GL_EXT_abgr,
+    GL_EXT_bgra, GL_EXT_bindable_uniform, GL_EXT_blend_color,
+    GL_EXT_blend_equation_separate, GL_EXT_blend_func_separate,
+    GL_EXT_blend_minmax, GL_EXT_blend_subtract, GL_EXT_compiled_vertex_array,
+    GL_EXT_depth_bounds_test, GL_EXT_direct_state_access,
+    GL_EXT_draw_buffers2, GL_EXT_draw_instanced, GL_EXT_draw_range_elements,
+    GL_EXT_fog_coord, GL_EXT_framebuffer_blit, GL_EXT_framebuffer_multisample,
+    GL_EXT_framebuffer_multisample_blit_scaled, GL_EXT_framebuffer_object,
+    GL_EXT_framebuffer_sRGB, GL_EXT_geometry_shader4,
+    GL_EXT_gpu_program_parameters, GL_EXT_gpu_shader4,
+    GL_EXT_import_sync_object, GL_EXT_memory_object, GL_EXT_memory_object_fd,
+    GL_EXT_multi_draw_arrays, GL_EXT_packed_depth_stencil,
+    GL_EXT_packed_float, GL_EXT_packed_pixels, GL_EXT_pixel_buffer_object,
+    GL_EXT_point_parameters, GL_EXT_polygon_offset_clamp,
+    GL_EXT_provoking_vertex, GL_EXT_rescale_normal, GL_EXT_secondary_color,
+    GL_EXT_semaphore, GL_EXT_semaphore_fd, GL_EXT_separate_shader_objects,
+    GL_EXT_separate_specular_color, GL_EXT_shader_image_load_formatted,
+    GL_EXT_shader_image_load_store, GL_EXT_shader_integer_mix,
+    GL_EXT_shadow_funcs, GL_EXT_stencil_two_side, GL_EXT_stencil_wrap,
+    GL_EXT_texture3D, GL_EXT_texture_array, GL_EXT_texture_buffer_object,
+    GL_EXT_texture_compression_dxt1, GL_EXT_texture_compression_latc,
+    GL_EXT_texture_compression_rgtc, GL_EXT_texture_compression_s3tc,
+    GL_EXT_texture_cube_map, GL_EXT_texture_edge_clamp,
+    GL_EXT_texture_env_add, GL_EXT_texture_env_combine,
+    GL_EXT_texture_env_dot3, GL_EXT_texture_filter_anisotropic,
+    GL_EXT_texture_integer, GL_EXT_texture_lod, GL_EXT_texture_lod_bias,
+    GL_EXT_texture_mirror_clamp, GL_EXT_texture_object, GL_EXT_texture_sRGB,
+    GL_EXT_texture_sRGB_decode, GL_EXT_texture_shared_exponent,
+    GL_EXT_texture_storage, GL_EXT_texture_swizzle, GL_EXT_timer_query,
+    GL_EXT_transform_feedback2, GL_EXT_vertex_array, GL_EXT_vertex_array_bgra,
+    GL_EXT_vertex_attrib_64bit, GL_EXT_window_rectangles,
+    GL_EXT_x11_sync_object, GL_IBM_rasterpos_clip,
+    GL_IBM_texture_mirrored_repeat, GL_KHR_blend_equation_advanced,
+    GL_KHR_blend_equation_advanced_coherent, GL_KHR_context_flush_control,
+    GL_KHR_debug, GL_KHR_no_error, GL_KHR_parallel_shader_compile,
+    GL_KHR_robust_buffer_access_behavior, GL_KHR_robustness,
+    GL_KTX_buffer_region, GL_NVX_conditional_render, GL_NVX_gpu_memory_info,
+    GL_NVX_nvenc_interop, GL_NV_ES1_1_compatibility,
+    GL_NV_ES3_1_compatibility, GL_NV_alpha_to_coverage_dither_control,
+    GL_NV_bindless_multi_draw_indirect,
+    GL_NV_bindless_multi_draw_indirect_count, GL_NV_bindless_texture,
+    GL_NV_blend_equation_advanced, GL_NV_blend_equation_advanced_coherent,
+    GL_NV_blend_minmax_factor, GL_NV_blend_square, GL_NV_command_list,
+    GL_NV_compute_program5, GL_NV_conditional_render,
+    GL_NV_copy_depth_to_color, GL_NV_copy_image, GL_NV_depth_buffer_float,
+    GL_NV_depth_clamp, GL_NV_draw_texture, GL_NV_draw_vulkan_image,
+    GL_NV_explicit_multisample, GL_NV_fence, GL_NV_float_buffer,
+    GL_NV_fog_distance, GL_NV_fragment_program, GL_NV_fragment_program2,
+    GL_NV_fragment_program_option, GL_NV_framebuffer_multisample_coverage,
+    GL_NV_geometry_shader4, GL_NV_gpu_program4, GL_NV_gpu_program4_1,
+    GL_NV_gpu_program5, GL_NV_gpu_program5_mem_extended,
+    GL_NV_gpu_program_fp64, GL_NV_gpu_shader5, GL_NV_half_float,
+    GL_NV_internalformat_sample_query, GL_NV_light_max_exponent,
+    GL_NV_multisample_coverage, GL_NV_multisample_filter_hint,
+    GL_NV_occlusion_query, GL_NV_packed_depth_stencil,
+    GL_NV_parameter_buffer_object, GL_NV_parameter_buffer_object2,
+    GL_NV_path_rendering, GL_NV_pixel_data_range, GL_NV_point_sprite,
+    GL_NV_primitive_restart, GL_NV_query_resource, GL_NV_query_resource_tag,
+    GL_NV_register_combiners, GL_NV_register_combiners2,
+    GL_NV_robustness_video_memory_purge, GL_NV_shader_atomic_counters,
+    GL_NV_shader_atomic_float, GL_NV_shader_atomic_int64,
+    GL_NV_shader_buffer_load, GL_NV_shader_storage_buffer_object,
+    GL_NV_shader_thread_group, GL_NV_shader_thread_shuffle,
+    GL_NV_texgen_reflection, GL_NV_texture_barrier,
+    GL_NV_texture_compression_vtc, GL_NV_texture_env_combine4,
+    GL_NV_texture_multisample, GL_NV_texture_rectangle,
+    GL_NV_texture_rectangle_compressed, GL_NV_texture_shader,
+    GL_NV_texture_shader2, GL_NV_texture_shader3, GL_NV_transform_feedback,
+    GL_NV_transform_feedback2, GL_NV_uniform_buffer_unified_memory,
+    GL_NV_vdpau_interop, GL_NV_vertex_array_range, GL_NV_vertex_array_range2,
+    GL_NV_vertex_attrib_integer_64bit, GL_NV_vertex_buffer_unified_memory,
+    GL_NV_vertex_program, GL_NV_vertex_program1_1, GL_NV_vertex_program2,
+    GL_NV_vertex_program2_option, GL_NV_vertex_program3, GL_S3_s3tc,
+    GL_SGIS_generate_mipmap, GL_SGIS_texture_lod, GL_SGIX_depth_texture,
+    GL_SGIX_shadow, GL_SUN_slice_accum
+
+OpenGL ES profile version string: OpenGL ES 3.2 NVIDIA 387.34
+OpenGL ES profile shading language version string: OpenGL ES GLSL ES 3.20
+OpenGL ES profile extensions:
+    GL_ANDROID_extension_pack_es31a, GL_EXT_base_instance,
+    GL_EXT_blend_func_extended, GL_EXT_blend_minmax, GL_EXT_buffer_storage,
+    GL_EXT_clear_texture, GL_EXT_clip_cull_distance,
+    GL_EXT_color_buffer_float, GL_EXT_color_buffer_half_float,
+    GL_EXT_compressed_ETC1_RGB8_sub_texture, GL_EXT_conservative_depth,
+    GL_EXT_copy_image, GL_EXT_debug_label, GL_EXT_discard_framebuffer,
+    GL_EXT_disjoint_timer_query, GL_EXT_draw_buffers_indexed,
+    GL_EXT_draw_elements_base_vertex, GL_EXT_draw_transform_feedback,
+    GL_EXT_float_blend, GL_EXT_frag_depth, GL_EXT_geometry_point_size,
+    GL_EXT_geometry_shader, GL_EXT_gpu_shader5, GL_EXT_map_buffer_range,
+    GL_EXT_memory_object, GL_EXT_memory_object_fd, GL_EXT_multi_draw_indirect,
+    GL_EXT_multisample_compatibility, GL_EXT_occlusion_query_boolean,
+    GL_EXT_polygon_offset_clamp, GL_EXT_primitive_bounding_box,
+    GL_EXT_render_snorm, GL_EXT_robustness, GL_EXT_sRGB,
+    GL_EXT_sRGB_write_control, GL_EXT_semaphore, GL_EXT_semaphore_fd,
+    GL_EXT_separate_shader_objects, GL_EXT_shader_group_vote,
+    GL_EXT_shader_implicit_conversions, GL_EXT_shader_integer_mix,
+    GL_EXT_shader_io_blocks, GL_EXT_shader_non_constant_global_initializers,
+    GL_EXT_shader_texture_lod, GL_EXT_shadow_samplers, GL_EXT_sparse_texture,
+    GL_EXT_tessellation_point_size, GL_EXT_tessellation_shader,
+    GL_EXT_texture_border_clamp, GL_EXT_texture_buffer,
+    GL_EXT_texture_compression_bptc, GL_EXT_texture_compression_dxt1,
+    GL_EXT_texture_compression_rgtc, GL_EXT_texture_compression_s3tc,
+    GL_EXT_texture_cube_map_array, GL_EXT_texture_filter_anisotropic,
+    GL_EXT_texture_format_BGRA8888, GL_EXT_texture_norm16, GL_EXT_texture_rg,
+    GL_EXT_texture_sRGB_R8, GL_EXT_texture_sRGB_decode,
+    GL_EXT_texture_storage, GL_EXT_texture_view, GL_EXT_unpack_subimage,
+    GL_EXT_window_rectangles, GL_KHR_blend_equation_advanced,
+    GL_KHR_blend_equation_advanced_coherent, GL_KHR_context_flush_control,
+    GL_KHR_debug, GL_KHR_no_error, GL_KHR_parallel_shader_compile,
+    GL_KHR_robust_buffer_access_behavior, GL_KHR_robustness, GL_NV_bgr,
+    GL_NV_bindless_texture, GL_NV_blend_equation_advanced,
+    GL_NV_blend_equation_advanced_coherent, GL_NV_blend_minmax_factor,
+    GL_NV_conditional_render, GL_NV_copy_buffer, GL_NV_copy_image,
+    GL_NV_draw_buffers, GL_NV_draw_instanced, GL_NV_draw_texture,
+    GL_NV_draw_vulkan_image, GL_NV_explicit_attrib_location,
+    GL_NV_fbo_color_attachments, GL_NV_framebuffer_blit,
+    GL_NV_framebuffer_multisample, GL_NV_generate_mipmap_sRGB,
+    GL_NV_gpu_shader5, GL_NV_image_formats, GL_NV_instanced_arrays,
+    GL_NV_internalformat_sample_query, GL_NV_non_square_matrices,
+    GL_NV_occlusion_query_samples, GL_NV_pack_subimage, GL_NV_packed_float,
+    GL_NV_packed_float_linear, GL_NV_path_rendering,
+    GL_NV_pixel_buffer_object, GL_NV_polygon_mode, GL_NV_read_buffer,
+    GL_NV_read_depth, GL_NV_read_depth_stencil, GL_NV_read_stencil,
+    GL_NV_sRGB_formats, GL_NV_shader_noperspective_interpolation,
+    GL_NV_shadow_samplers_array, GL_NV_shadow_samplers_cube,
+    GL_NV_texture_array, GL_NV_texture_barrier, GL_NV_texture_border_clamp,
+    GL_NV_texture_compression_latc, GL_NV_texture_compression_s3tc,
+    GL_NV_texture_compression_s3tc_update, GL_NV_timer_query,
+    GL_NV_viewport_array, GL_OES_compressed_ETC1_RGB8_texture,
+    GL_OES_copy_image, GL_OES_depth24, GL_OES_depth32, GL_OES_depth_texture,
+    GL_OES_depth_texture_cube_map, GL_OES_draw_buffers_indexed,
+    GL_OES_draw_elements_base_vertex, GL_OES_element_index_uint,
+    GL_OES_fbo_render_mipmap, GL_OES_geometry_point_size,
+    GL_OES_geometry_shader, GL_OES_get_program_binary, GL_OES_gpu_shader5,
+    GL_OES_mapbuffer, GL_OES_packed_depth_stencil,
+    GL_OES_primitive_bounding_box, GL_OES_rgb8_rgba8, GL_OES_sample_shading,
+    GL_OES_sample_variables, GL_OES_shader_image_atomic,
+    GL_OES_shader_io_blocks, GL_OES_shader_multisample_interpolation,
+    GL_OES_standard_derivatives, GL_OES_tessellation_point_size,
+    GL_OES_tessellation_shader, GL_OES_texture_border_clamp,
+    GL_OES_texture_buffer, GL_OES_texture_cube_map_array,
+    GL_OES_texture_float, GL_OES_texture_float_linear,
+    GL_OES_texture_half_float, GL_OES_texture_half_float_linear,
+    GL_OES_texture_npot, GL_OES_texture_stencil8,
+    GL_OES_texture_storage_multisample_2d_array, GL_OES_texture_view,
+    GL_OES_vertex_array_object, GL_OES_vertex_half_float,
+    GL_OES_viewport_array
+
+132 GLX Visuals
+    visual  x   bf lv rg d st  colorbuffer  sr ax dp st accumbuffer  ms  cav
+  id dep cl sp  sz l  ci b ro  r  g  b  a F gb bf th cl  r  g  b  a ns b eat
+----------------------------------------------------------------------------
+0x060 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x061 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x063 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x064 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x065 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x066 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x067 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x068 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x069 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x06a 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x06b 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x06c 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x06d 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x06e 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x06f 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x070 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x071 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x072 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x073 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x074 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x075 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x076 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x077 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x078 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x079 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x07a 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x07b 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x07c 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x07d 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x07e 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x07f 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x080 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x081 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x082 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x083 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x084 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x085 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x086 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x087 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x088 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x089 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x08a 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x08b 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x08c 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x08d 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x08e 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x08f 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x090 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x091 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x092 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x093 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x094 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x095 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x096 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x097 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x098 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x099 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x09a 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x09b 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x09c 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x09d 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x09e 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x09f 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x0a0 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x0a1 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0a2 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0a3 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0a4 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0a5 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0a6 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0a7 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0a8 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0a9 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0aa 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0ab 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0ac 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0ad 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0ae 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0af 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0b0 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0b1 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0b2 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0b3 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0b4 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0b5 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x0b6 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x0b7 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x0b8 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x062 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x0b9 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x0ba 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x0bb 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x0bc 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x0bd 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x0be 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x0bf 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x0c0 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x0c1 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x0c2 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x0c3 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x0c4 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0c5 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0c6 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x0c7 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x0c8 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0c9 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0ca 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x0cb 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x0cc 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0cd 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0ce 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0cf 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0d0 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0d1 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x0d2 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0d3 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x0d4 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0d5 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0d6 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0d7 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x0d8 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0d9 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0da 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0db 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x0dc 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0dd 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0de 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0df 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x0e0 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x0e1 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x0e2 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x0e3 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+
+215 GLXFBConfigs:
+    visual  x   bf lv rg d st  colorbuffer  sr ax dp st accumbuffer  ms  cav
+  id dep cl sp  sz l  ci b ro  r  g  b  a F gb bf th cl  r  g  b  a ns b eat
+----------------------------------------------------------------------------
+0x0e4 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x0e5 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x0e6 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x0e7 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x0e8 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x0e9 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x0ea 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x0eb 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x0ec 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x0ed 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x0ee 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x0ef 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x0f0 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x0f1 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x0f2 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x0f3 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x0f4 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x0f5 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x0f6 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x0f7 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x0f8 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x0f9 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x0fa 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x0fb 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x0fc 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0fd 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0fe 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x0ff 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x100 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x101 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x102 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x103 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x104 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x105 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x106 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x107 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x108 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x109 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x10a 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x10b 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x10c 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x10d 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x10e 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x10f 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x110 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x111 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x112 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x113 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x114 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x115 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x116 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x117 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x118 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x119 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x11a 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x11b 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x11c 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x11d 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x11e 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x11f 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x120 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x121 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x122 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x123 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x124 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x125 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x126 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x127 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x128 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x129 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x12a 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x12b 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x12c 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x12d 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x12e 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x12f 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x130 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x131 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x132 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x133 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x134 24 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x135 24 dc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x136 24 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x137 24 dc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x138 24 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x139 24 dc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x13a 24 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x13b 24 dc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x13c 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x13d 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x13e 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  0 0 None
+0x13f 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  0 0 None
+0x140 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x141 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x142 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  0 0 None
+0x143 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  0 0 None
+0x144 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x145 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x146 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4  0  0 16 16 16 16  0 0 None
+0x147 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4  0  0 16 16 16 16  0 0 None
+0x148 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x149 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x14a 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x14b 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x14c 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x14d 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  2 1 Ncon
+0x14e 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x14f 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  4 1 Ncon
+0x150 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x151 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x152 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x153 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x154 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x155 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  2 1 Ncon
+0x156 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x157 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  4 1 Ncon
+0x158 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x159 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x15a 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x15b 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16  8 1 Ncon
+0x15c 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x15d 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x15e 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x15f 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16  8 1 Ncon
+0x160 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x161 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x162 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x163 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  0 16 16 16 16 16 1 Ncon
+0x164 32 tc  0  24  0 r  y .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x165 32 tc  0  32  0 r  y .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x166 32 tc  0  24  0 r  . .   8  8  8  0 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x167 32 tc  0  32  0 r  . .   8  8  8  8 .  s  4 24  8 16 16 16 16 16 1 Ncon
+0x168  0 sg  0  16  0 r  y .   5  6  5  0 .  .  4 16  0 16 16 16 16  0 0 None
+0x169  0 sg  0  16  0 r  . .   5  6  5  0 .  .  4 16  0 16 16 16 16  0 0 None
+0x16a  0 sg  0  16  0 r  y .   5  6  5  0 .  .  4 24  0 16 16 16 16  0 0 None
+0x16b  0 sg  0  16  0 r  . .   5  6  5  0 .  .  4 24  0 16 16 16 16  0 0 None
+0x16c  0 sg  0  16  0 r  y .   5  6  5  0 .  .  4 24  8 16 16 16 16  0 0 None
+0x16d  0 sg  0  16  0 r  . .   5  6  5  0 .  .  4 24  8 16 16 16 16  0 0 None
+0x16e  0 sg  0  16  0 r  y .   5  6  5  0 .  .  4  0  0 16 16 16 16  0 0 None
+0x16f  0 sg  0  16  0 r  . .   5  6  5  0 .  .  4  0  0 16 16 16 16  0 0 None
+0x170  0 sg  0   0  0 r  . .   0  0  0  0 .  .  4 16  0 16 16 16 16  0 0 None
+0x171  0 sg  0   0  0 r  . .   0  0  0  0 .  .  4 24  0 16 16 16 16  0 0 None
+0x172  0 sg  0   0  0 r  . .   0  0  0  0 .  .  4 24  8 16 16 16 16  0 0 None
+0x173  0 sg  0  32  0 r  . .  16 16  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x174  0 sg  0  32  0    . .  16 16  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x175  0 sg  0  32  0 r  y .  16 16  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x176  0 sg  0  32  0    y .  16 16  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x177  0 sg  0  32  0 r  . .  32  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x178  0 sg  0  32  0    . .  32  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x179  0 sg  0  32  0 r  y .  32  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x17a  0 sg  0  32  0    y .  32  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x17b  0 sg  0  64  0 r  . .  16 16 16 16 f  .  4  0  0 16 16 16 16  0 0 None
+0x17c  0 sg  0  64  0    . .  16 16 16 16 f  .  4  0  0 16 16 16 16  0 0 None
+0x17d  0 sg  0  64  0 r  y .  16 16 16 16 f  .  4  0  0 16 16 16 16  0 0 None
+0x17e  0 sg  0  64  0    y .  16 16 16 16 f  .  4  0  0 16 16 16 16  0 0 None
+0x17f  0 sg  0 128  0 r  . .  32 32 32 32 f  .  4  0  0 16 16 16 16  0 0 None
+0x180  0 sg  0 128  0    . .  32 32 32 32 f  .  4  0  0 16 16 16 16  0 0 None
+0x181  0 sg  0 128  0 r  y .  32 32 32 32 f  .  4  0  0 16 16 16 16  0 0 None
+0x182  0 sg  0 128  0    y .  32 32 32 32 f  .  4  0  0 16 16 16 16  0 0 None
+0x183  0 sg  0  32  0 r  . .  16 16  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x184  0 sg  0  32  0    . .  16 16  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x185  0 sg  0  32  0 r  y .  16 16  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x186  0 sg  0  32  0    y .  16 16  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x187  0 sg  0  32  0 r  . .  16 16  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x188  0 sg  0  32  0    . .  16 16  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x189  0 sg  0  32  0 r  y .  16 16  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x18a  0 sg  0  32  0    y .  16 16  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x18b  0 sg  0  32  0 r  . .  32  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x18c  0 sg  0  32  0    . .  32  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x18d  0 sg  0  32  0 r  y .  32  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x18e  0 sg  0  32  0    y .  32  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x18f  0 sg  0  32  0 r  . .  32  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x190  0 sg  0  32  0    . .  32  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x191  0 sg  0  32  0 r  y .  32  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x192  0 sg  0  32  0    y .  32  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x193  0 sg  0  64  0 r  . .  16 16 16 16 f  .  4 24  0 16 16 16 16  0 0 None
+0x194  0 sg  0  64  0    . .  16 16 16 16 f  .  4 24  0 16 16 16 16  0 0 None
+0x195  0 sg  0  64  0 r  y .  16 16 16 16 f  .  4 24  0 16 16 16 16  0 0 None
+0x196  0 sg  0  64  0    y .  16 16 16 16 f  .  4 24  0 16 16 16 16  0 0 None
+0x197  0 sg  0  64  0 r  . .  16 16 16 16 f  .  4 24  8 16 16 16 16  0 0 None
+0x198  0 sg  0  64  0    . .  16 16 16 16 f  .  4 24  8 16 16 16 16  0 0 None
+0x199  0 sg  0  64  0 r  y .  16 16 16 16 f  .  4 24  8 16 16 16 16  0 0 None
+0x19a  0 sg  0  64  0    y .  16 16 16 16 f  .  4 24  8 16 16 16 16  0 0 None
+0x19b  0 sg  0 128  0 r  . .  32 32 32 32 f  .  4 24  0 16 16 16 16  0 0 None
+0x19c  0 sg  0 128  0    . .  32 32 32 32 f  .  4 24  0 16 16 16 16  0 0 None
+0x19d  0 sg  0 128  0 r  y .  32 32 32 32 f  .  4 24  0 16 16 16 16  0 0 None
+0x19e  0 sg  0 128  0    y .  32 32 32 32 f  .  4 24  0 16 16 16 16  0 0 None
+0x19f  0 sg  0 128  0 r  . .  32 32 32 32 f  .  4 24  8 16 16 16 16  0 0 None
+0x1a0  0 sg  0 128  0    . .  32 32 32 32 f  .  4 24  8 16 16 16 16  0 0 None
+0x1a1  0 sg  0 128  0 r  y .  32 32 32 32 f  .  4 24  8 16 16 16 16  0 0 None
+0x1a2  0 sg  0 128  0    y .  32 32 32 32 f  .  4 24  8 16 16 16 16  0 0 None
+0x1a3  0 sg  0  16  0 r  . .  16  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1a4  0 sg  0  16  0    . .  16  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1a5  0 sg  0  16  0 r  y .  16  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1a6  0 sg  0  16  0    y .  16  0  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1a7  0 sg  0  64  0 r  . .  32 32  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1a8  0 sg  0  64  0    . .  32 32  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1a9  0 sg  0  64  0 r  y .  32 32  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1aa  0 sg  0  64  0    y .  32 32  0  0 f  .  4  0  0 16 16 16 16  0 0 None
+0x1ab  0 sg  0  16  0 r  . .  16  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1ac  0 sg  0  16  0    . .  16  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1ad  0 sg  0  16  0 r  y .  16  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1ae  0 sg  0  16  0    y .  16  0  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1af  0 sg  0  16  0 r  . .  16  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1b0  0 sg  0  16  0    . .  16  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1b1  0 sg  0  16  0 r  y .  16  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1b2  0 sg  0  16  0    y .  16  0  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1b3  0 sg  0  64  0 r  . .  32 32  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1b4  0 sg  0  64  0    . .  32 32  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1b5  0 sg  0  64  0 r  y .  32 32  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1b6  0 sg  0  64  0    y .  32 32  0  0 f  .  4 24  0 16 16 16 16  0 0 None
+0x1b7  0 sg  0  64  0 r  . .  32 32  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1b8  0 sg  0  64  0    . .  32 32  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1b9  0 sg  0  64  0 r  y .  32 32  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+0x1ba  0 sg  0  64  0    y .  32 32  0  0 f  .  4 24  8 16 16 16 16  0 0 None
+
