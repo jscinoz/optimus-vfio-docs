@@ -8,8 +8,15 @@ information that should be current (and hopefully accurate)
   that does this, but this patch does not appear mainline yet
 * Nouveau seems to create a render node, whether anything actually works is TBD
 
-
 TODO:
+* Try in BIOS VM
+  * Nouveau can load from pci rom fine, try ACPI
+  * Seem to be able to get it from ASL too :O
+* Try reading ROM from qemu fw_cfg - might be exposed to ACPI
+* Patch OVMF to to have ACPI \_ROM method
+  * Tried doing this through ASL, but couldn't find a way to get the ROM data
+    from PCI XROMBAR
+  * Just have it expose ROMs, still do the rest in ASL
 * Try binary nvidia + QXL (no gvt)
 * Upload various xorg.confs
 * Try with git kernel
@@ -17,12 +24,6 @@ TODO:
 * Try using qxl + gvt (without nvidia) to debug qxl reverse prime
 * Experiment with qemu emulated intel_iommu to see if that resolves the swiotlb
   issue
-* Instead of custom DSDT, for linux nvidia driver, hack nvidia-acpi.c to just
-  load hard-coded vbios
-* Figure out why we need to set up vfio-pci manually and libvirt fails
-  * Seems it's setting up VFIO groups wrong?
-* Test using nouveau render node directly
-  * Tentatively done, but need to actually validate our test methodology
 * See if we can debug PRIME issues further
   * So far, setting nvidia as output source for qxl results in BadValue from
     xrandr :(
@@ -31,12 +32,6 @@ TODO:
     * Running into odd memory issues with qxl reverse prime:
       qxl 0000:00:03.0: swiotlb buffer is full (sz: 299008 bytes)
       qxl 0000:00:03.0: DMA: Out of SW-IOMMU space for 299008 bytes
-* Try with bumblebee
-  * Didn't work with QXL without patching out check for intel GPU
-  * Fails to start second X display on nvidia card due to lack of ouputs
-    * Test if bumblebee even works on the host
-* Try with wayland
-  * So far, wayland just flashes for a bit then freezes
 * Test with nvidia as primary VGA
   * Ideally without GVT
   * Can we have reverse prime with non-primary QXL for output?
@@ -51,3 +46,20 @@ TODO:
     xorg-server-1.19.5/dix/dispatch.c:4035: AttachOutputGPU: Assertion `new->current_master == pScreen` failed.
   * Test with just QXL and gvt for shiggles
     * Doesn't work, QXL has only "Sink Output", nothing else
+* Does bumblebee even work on the host?
+
+
+DONE
+* Figure out why we need to set up vfio-pci manually and libvirt fails
+  * Seems it's setting up VFIO groups wrong?
+* Test using nouveau render node directly
+  * Tentatively done, but need to actually validate our test methodology
+* Instead of custom DSDT, for linux nvidia driver, hack nvidia-acpi.c to just
+  load hard-coded vbios
+  * Works
+* Try with bumblebee
+  * Didn't work with QXL without patching out check for intel GPU
+  * Fails to start second X display on nvidia card due to lack of ouputs
+    * Test if bumblebee even works on the host
+* Try with wayland
+  * So far, wayland just flashes for a bit then freezes
