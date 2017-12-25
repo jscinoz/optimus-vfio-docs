@@ -8,6 +8,51 @@ information that should be current (and hopefully accurate)
   that does this, but this patch does not appear mainline yet
 * Nouveau seems to create a render node, whether anything actually works is TBD
 
+
+# Current state of ACPI shenanigans
+* ASL works under seabios and nvidia driver loads vbios from ACPI successfully
+  * But, nvidia drivers has errors once X is started that didn't happen under
+    UEFI (with vbios loading faked from inline blob)
+  * Windows BSODs with:
+    ```
+ACPI_BIOS_ERROR:
+
+Arg1: 0000000000001000, ACPI_BIOS_USING_OS_MEMORY
+  ACPI had a fatal error when processing a memory operation region.
+  The memory operation region tried to map memory that has been
+  allocated for OS usage.
+    ```
+    Seems it is not happy with me reading the option from from bios-assigned
+    XROMBAR from within ASL :(
+    * Looks like windows may be re-initialising the XROMBAR - the address my ASL
+    tries to read when it causes the crash looks nonsense (0xFFFFF800)
+* Have not found a way to get the vbios from ASL under OVMF. It seems that once
+  OVMF itself has read out option ROMs, they are no longer accessible. I think
+  we might need to patch OVMF to retain these maybe generate another SSDT that
+  contains OperationRegion for each PCI device with an option rom
+  * If we define resources in ACPI for the device (such as a memory region for
+    the oprom), will OVMF use these instead? (See:
+    PciHostBridgeResourceAllocator, specifically usage of GetResourceBase and
+    ProcessOptionRom), ACPI `_PRS`?
+    * No, I don't think so, after further analysis of OVMF code
+
+## To try next
+* Try reading under efi shell with mm again, but this time, set the memory space
+  bit too!
+* Figure out GVT issues - only works intermittently
+* BIOS
+  * Gvt with qxl as primary
+  * GVT with qxl as secondary
+  * gvt + nvidia, no QXL
+  * Windows guest
+    * GVT primary, nvidia secondary (matches real hardware)
+    * GVT + QXL primary
+    * GVT primary + QXL
+    * QXL + Nvidia
+    * QXL + GVT + Nvidia
+* EFI
+  * OVMF hack to not clear XROMBAR - see if we can then get to it from ASL
+
 TODO:
 * Try in BIOS VM
   * Nouveau can load from pci rom fine, try ACPI
