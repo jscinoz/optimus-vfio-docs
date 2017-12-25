@@ -16,7 +16,8 @@ this is not for you. For such devices, see
     x-pci-sub-device-id on the qemu vfio-pci device for the nvidia card
   * Nvidia VBIOS must be provided to the guest via libvirt's `<rom file=...>` /
     qemu's `romfile` option on the device
-    * VBIOS can be obtained by dumping the system firmware with
+    * VBIOS can be obtained under linux by extracting a BIOS update using [coderobe/VBiosFinder](https://github.com/coderobe/VBiosFinder)
+    * Alternatively, when using Windows the VBIOS can be obtained by dumping the system firmware with
       [Universal Bios Backup Toolkit](https://forums.mydigitallife.net/threads/universal-bios-backup-toolkit.9856/)
       and using MMTool to extract the VBIOS fromthe "Option ROMs" section
       * This needs to be done under bare-metal Windows. I use a Windows-To-Go
@@ -114,5 +115,6 @@ Valid ROM signature found @0h, PCIR offset 190h
 
 # What's needed
 * A way to obtain a dump of nvidia VBIOS under Linux
+  * Try [coderobe/VBiosFinder](https://github.com/coderobe/VBiosFinder)
 * Custom ACPI tables embedding nvidia VBIOS and exposing it via the `_ROM`
   method at the appropriate path
