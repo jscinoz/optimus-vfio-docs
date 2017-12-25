@@ -27,8 +27,7 @@ this is not for you. For such devices, see
     VMs
   * My dumped VBIOS did **not** have EFI support, but I don't think that is
     necessary when the card has no outputs. rom-parser output for reference:
-    ```
-Valid ROM signature found @0h, PCIR offset 190h
+    ```Valid ROM signature found @0h, PCIR offset 190h
 	PCIR: type 0, vendor: 10de, device: 139b, class: 030200
 	PCIR: revision 3, vendor revision: 1
 	Last image
@@ -63,7 +62,7 @@ Valid ROM signature found @0h, PCIR offset 190h
 			inline it in the patch.
   * Long term we need to build a custom ACPI table (provided to qemu with the
     `-acpitable` option) that has `_ROM` implemented at the correct path. The
-    `_ROM` implementationm would need to seek over a hard-coded buffer stored
+    `_ROM` implementation would need to seek over a hard-coded buffer stored
     elsewhere and return the VBIOS in 4kb chunks as expected by nvidia driver
 
 # What doesn't work (yet)
