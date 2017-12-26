@@ -1,0 +1,4 @@
+[submodule "qemu"]
+	path = qemu
+	url = git@github.com:jscinoz/qemu.git
+	branch = acpi-rom-method
