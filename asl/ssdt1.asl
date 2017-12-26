@@ -31,7 +31,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "Optimus", 0x00000001) {
                 // Reserved - not used
                 ,     10,
                 // Base address of ROM image
-                // Note that this needs to be left-shifted by 12 on reads, and
+                // Note that this needs to be left-shifted by 11 on reads, and
                 // right-shfited by 11 on writes
                 BASE, 21,
             }
