@@ -35,6 +35,10 @@ Arg1: 0000000000001000, ACPI_BIOS_USING_OS_MEMORY
     PciHostBridgeResourceAllocator, specifically usage of GetResourceBase and
     ProcessOptionRom), ACPI `_PRS`?
     * No, I don't think so, after further analysis of OVMF code
+* Qemu investigation
+  * romfile is provided and rombar=0, qemu will put the rom in fw_cfg :D
+  * Need to see if we can read this directly from ASL, or failing that, patch
+    QEMU to generate the `_ROM` method for us
 
 ## To try next
 * Try reading under efi shell with mm again, but this time, set the memory space
