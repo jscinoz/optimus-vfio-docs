@@ -37,6 +37,22 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
     }
 
     Scope (\_SB.PCI0.PEG0.PEGP) {
+        // Read the requested number of bytes from fw_cfg, returning it in a
+        // buffer
+        Method (FWR, One, NotSerialized) {
+            // Byte length
+            Local0 = Arg0
+
+            // Output buffer
+            Local1 = Buffer(Local0) {}
+
+            for (Local2 = 0, Local2 < Local0, Local2++) {
+                Index(Local1, Local2) = DATA
+            }
+
+            Return (Local1)
+        }
+
         // Verify fw_cfg is set up properly
         Method(FWV, Zero, NotSerialized) {
             If (ID != 0x47) {
@@ -52,17 +68,12 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
                 Return (One)
             }
 
-            // Verify fw_cfg signature
-            Local0 = Buffer(4) {}
-
             // 0x0 = FW_CFG_SIGNATURE
             CTRL = Zero
 
-            For (Local1 = 0, Local1 < 4, Local1++) {
-                Index(Local0, Local1) = DATA
-            }
+            Local0 = ToString(FWR(4))
 
-            If ("QEMU" != ToString(Local0)) {
+            If ("QEMU" != Local0) {
                 Debug = "Missing fw_cfg signature"
                 Return (One)
             }
