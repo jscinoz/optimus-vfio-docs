@@ -114,9 +114,37 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             Return (Local3)
         }
 
-        // Returns the file at the specified index in the provided FW_CFG_FILE_DIR
-        Method(FILG, 2, NotSerialized) {
+        // Returns the file count field as an integer, from the provided
+        // FW_CFG_FILE_DIR struct
+        Method(GFC, One, NotSerialized) {
             // FW_CFG_FILE_DIR
+            Local0 = Arg0
+
+            // File count (as DWord buffer)
+            CreateDWordField(Local0, 0, FCNT)
+
+            // FIXME: FCNT is big endian, how do we convert it properly? This
+            // shift is probably wrong
+            Return (FCNT >> 24)
+        }
+
+        // Returns the file list field from the provided FW_CFG_FILE_DIR struct,
+        // using the provided file count
+        Method (GFL, 2, NotSerialized) {
+            // FW_CFG_FILE_DIR
+            Local0 = Arg0
+            // File count
+            Local1 = Arg1
+
+            // File list
+            CreateField(Local0, 4 * 8, Local1 * 64 * 8, FLST)
+
+            return (FLST)
+        }
+
+        // Returns the file at the specified index in the provided file list
+        Method(FILG, 2, NotSerialized) {
+            // File list
             Local0 = Arg0
             // File index
             Local1 = Arg1
@@ -132,20 +160,8 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // A buffer containing a fw_cfg_file struct
             Local0 = Arg0
 
-            Debug = "Local0"
-            Debug = Local0
-
             // Name field of file
             CreateField(Local0, 64, 56 * 8, FNAM)
-
-            // FIXME: Seems we have a dodgy offset or something?
-
-            Debug = "FNAM"
-            Debug = FNAM
-            Debug = "ToString(FNAM)"
-            Debug = ToString(FNAM)
-            Debug = "ToString(FNAM, 56)"
-            Debug = ToString(FNAM, 56)
 
             Return (ToString(FNAM))
         }
@@ -157,32 +173,29 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             Local0 = Arg0
             // Target filename
             Local1 = Arg1
-
-            // File count (as DWord buffer)
-            CreateDWordField(Local0, 0, FCNT)
-
-            // File count as int (is this conversion correct?)
-            // FIXME: Conversion is probably wrong, length value is big endian
-            Local2 = FCNT >> 24
-
+            // File count
+            Local2 = GFC(Local0)
             // File list
-            CreateField(Local0, 4 * 8, Local2 * 64 * 8, FLST)
+            Local3 = GFL(Local0, Local2)
 
-            For (Local3 = 0, Local3 < Local2, Local3++) {
+            Debug = "Target:"
+            Debug = Local1
+
+            For (Local4 = 0, Local4 < Local2, Local4++) {
                 // Current file
-                Local4 = FILG(Local0, Local3);
+                Local5 = FILG(Local3, Local4);
 
                 // Current file name
-                Local5 = GFN(Local4)
+                Local6 = GFN(Local5)
 
                 Debug = "GFN result:"
-                Debug = Local5
+                Debug = Local6
 
-                If (Local5 == Local1) {
+                If (Local6 == Local1) {
                     Debug = "FOUND TARGET FILE,"
 
                     // Selector field of current file
-                    CreateField(Local4, 32, 16, FSEL)
+                    CreateField(Local5, 32, 16, FSEL)
 
                     // XXX: Selector is big endian
                     Debug = "FSEL"
@@ -228,7 +241,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             }
 
             // Our target file's selector
-            Local1 = FWGS(Local0, "10de:139b:4136:1764")
+            Local1 = FWGS(Local0, "genroms/10de:139b:4136:1764")
 
             Debug = "FWGS"
             Debug = Local1
