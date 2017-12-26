@@ -81,27 +81,69 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             Return (Zero)
         }
 
+        // Loads the fw_cfg file directory
         Method (FWGF, Zero, NotSerialized) {
             // 0x19 = FW_CFG_FILE_DIR
             CTRL = 0x19
 
-            Local0 = Buffer(4) {}
-            For (Local1 = 0, Local1 < 4, Local1++) {
-                Index(Local0, Local1) = DATA
-            }
+            // First four bytes of FW_CFG_FILE_DIR, containing the entry count
+            Local0 = FWR(4)
+
+            // Number of fw_cfg files
+            // XXX: Is this conversion actually correct?
+            Local1 = Local0 >> 24
+
+            // One fw_cfg file = 15 bytes
+            // Total byte count to read
+            Local2 = Local1 * 15
+
+            // TODO: Assertions / check that we're doing the right thing
+
+            // Output buffer (+4 bytes for the count)
+            Local3 = Buffer(Local2 + 4) {}
 
             // File count
-            Local0 = ToInteger(Local0)
+            CreateDWordField(Local3, 0, FCNT)
 
-            Debug = "Local0"
-            Debug = Local0
+            // File list
+            CreateField(Local3, 4 * 8, Local2 * 8, FLST)
 
-            Return (Buffer(1) {})
+            // Copy first four bytes in
+            FCNT = Local0
+
+            // Copy the file list in
+            FLST = FWR(Local2)
+
+            Return (Local3)
+        }
+
+        // Finds the selector for our target file in the given fw_cfg directory
+        // TODO: Take PCI ids as parameters so this can be hardware-independent
+        Method (FWGS, 2, NotSerialized) {
+            // FW_CFG_FILE_DIR
+            Local0 = Arg0
+            // Target filename
+            Local1 = Arg1
+
+            // File count
+            CreateDWordField(Local0, 0, FCNT)
+            Debug = "FCNT"
+            Debug = FCNT
+            // File list
+            CreateField(Local0, 4 * 8, FCNT * 8, FLST)
+
+
+            // Number of fw_cfg files as an int
+            // XXX: Is this conversion actually correct?
+            Local1 = FCNT >> 24
+
+            Debug = Local1
+
+
+            Return (Zero)
         }
 
         // Retrieves the VBIOS from qemu fw_cfg space.
-        // TODO: Make this generic by requiring ROMs to be named as per
-        // vendor:device:subven:subdev id and scan fw_cfg fs for it
         Method (ROMG, Zero, NotSerialized) {
             If (ROML == One) {
                 // Debug = "ROMG Already Run!"
@@ -116,6 +158,14 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // FW_CFG_FILE_DIR
             Local0 = FWGF()
 
+            If (SizeOf(Local0) == Zero) {
+                Debug = "Loading FW_CFG_FILE_DIR failed"
+                Return ()
+            }
+
+            // Our target file's selector
+            Local1 = FWGS(Local0, "10de:139b:4136:1764")
+
             Debug = "FWGF"
             Debug = Local0
 
@@ -127,6 +177,9 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
         Method (_ROM, 2, NotSerialized) {
             // Load the VBIOS into memory, if needed
             ROMG()
+
+            // XXX: Removeme
+            ROML = One
 
             // Bail early for now
             Return (Buffer (Arg1) {})
