@@ -13,9 +13,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
         Name (ROML, Zero)
 
         // Buffer to hold ROM data read from fw_cfg
-        // XXX: Does this need to be this large, does assinging to ROMB later
-        // copy into this buffer, or replace the object pointed to by ROMB?
-        Name (ROMB, Buffer(0x20000) {})
+        Name (ROMB, Buffer(Zero) {})
 
         CreateByteField(\_SB.PCI0.FWCF._CRS, 0, ID)
         CreateWordField(\_SB.PCI0.FWCF._CRS, 2, BMIN)
@@ -82,20 +80,19 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
         }
 
         // Loads the fw_cfg file directory
-        Method (FWGF, Zero, NotSerialized) {
+        Method (FDIR, Zero, NotSerialized) {
             // 0x19 = FW_CFG_FILE_DIR
             CTRL = 0x19
 
             // First four bytes of FW_CFG_FILE_DIR, containing the entry count
             Local0 = FWR(4)
 
-            // Number of fw_cfg files
-            // XXX: Is this conversion actually correct?
+            // Number of fw_cfg files (XXX: Is this conversioni correct?)
+            // FIXME: Conversion is probably wrong, length value is big endian
             Local1 = Local0 >> 24
 
-            // One fw_cfg file = 15 bytes
-            // Total byte count to read
-            Local2 = Local1 * 15
+            // Total byte count to read (One fw_cfg file = 64 bytes)
+            Local2 = Local1 * 64
 
             // TODO: Assertions / check that we're doing the right thing
 
@@ -117,6 +114,42 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             Return (Local3)
         }
 
+        // Returns the file at the specified index in the provided FW_CFG_FILE_DIR
+        Method(FILG, 2, NotSerialized) {
+            // FW_CFG_FILE_DIR
+            Local0 = Arg0
+            // File index
+            Local1 = Arg1
+
+            // File within file list
+            CreateField(Local0, Local1 * 64 * 8, 64 * 8, FILE)
+
+            Return (FILE)
+        }
+
+        // Returns the name of the provided fw_cfg file
+        Method(GFN, One, NotSerialized) {
+            // A buffer containing a fw_cfg_file struct
+            Local0 = Arg0
+
+            Debug = "Local0"
+            Debug = Local0
+
+            // Name field of file
+            CreateField(Local0, 64, 56 * 8, FNAM)
+
+            // FIXME: Seems we have a dodgy offset or something?
+
+            Debug = "FNAM"
+            Debug = FNAM
+            Debug = "ToString(FNAM)"
+            Debug = ToString(FNAM)
+            Debug = "ToString(FNAM, 56)"
+            Debug = ToString(FNAM, 56)
+
+            Return (ToString(FNAM))
+        }
+
         // Finds the selector for our target file in the given fw_cfg directory
         // TODO: Take PCI ids as parameters so this can be hardware-independent
         Method (FWGS, 2, NotSerialized) {
@@ -125,22 +158,53 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // Target filename
             Local1 = Arg1
 
-            // File count
+            // File count (as DWord buffer)
             CreateDWordField(Local0, 0, FCNT)
-            Debug = "FCNT"
-            Debug = FCNT
+
+            // File count as int (is this conversion correct?)
+            // FIXME: Conversion is probably wrong, length value is big endian
+            Local2 = FCNT >> 24
+
             // File list
-            CreateField(Local0, 4 * 8, FCNT * 8, FLST)
+            CreateField(Local0, 4 * 8, Local2 * 64 * 8, FLST)
 
+            For (Local3 = 0, Local3 < Local2, Local3++) {
+                // Current file
+                Local4 = FILG(Local0, Local3);
 
-            // Number of fw_cfg files as an int
-            // XXX: Is this conversion actually correct?
-            Local1 = FCNT >> 24
+                // Current file name
+                Local5 = GFN(Local4)
 
-            Debug = Local1
+                Debug = "GFN result:"
+                Debug = Local5
 
+                If (Local5 == Local1) {
+                    Debug = "FOUND TARGET FILE,"
+
+                    // Selector field of current file
+                    CreateField(Local4, 32, 16, FSEL)
+
+                    // XXX: Selector is big endian
+                    Debug = "FSEL"
+                    Debug = FSEL
+
+                    Return (FSEL)
+                }
+            }
 
             Return (Zero)
+        }
+
+
+        // Read the fw_cfg file identified by the given selector and return its
+        // contents as a buffer
+        Method (FRD, One, NotSerialized) {
+            // Selector for fw_cfg file to load
+            Local0 = Arg0
+
+            // TODO
+
+            Return (Buffer(Zero) {})
         }
 
         // Retrieves the VBIOS from qemu fw_cfg space.
@@ -156,7 +220,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             }
 
             // FW_CFG_FILE_DIR
-            Local0 = FWGF()
+            Local0 = FDIR()
 
             If (SizeOf(Local0) == Zero) {
                 Debug = "Loading FW_CFG_FILE_DIR failed"
@@ -166,8 +230,18 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // Our target file's selector
             Local1 = FWGS(Local0, "10de:139b:4136:1764")
 
-            Debug = "FWGF"
-            Debug = Local0
+            Debug = "FWGS"
+            Debug = Local1
+
+            If (Local1 == Zero) {
+                Debug = "Could not find target fw_cfg file"
+                Return ()
+            }
+
+            ROMB = FRD(Local1)
+
+            Debug = "ROMB"
+            Debug = ROMB
 
             ROML = One
         }
@@ -189,13 +263,13 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // Length in bytes
             Local1 = Arg1
 
-            // Clamp length to 4k
-            // XXX: Nouveau is happy to read larger chunks, if we don't clamp.
-            // Need to see how the nvidia driver behaves
+            // Clamp length to 4k as per ACPI spec
             If ((Local1 > 0x1000)) {
                 Local1 = 0x1000
             }
 
+            // FIXME: 128k is just based on our ROM. Use the size from the
+            // fw_cfg file
             // Bail if offset > 128k
             If ((Local0 > 0x20000)) {
                 Return (Buffer (Local1) {})
