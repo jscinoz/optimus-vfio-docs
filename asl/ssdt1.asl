@@ -37,7 +37,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
     Scope (\_SB.PCI0.PEG0.PEGP) {
         // Read the requested number of bytes from fw_cfg, returning it in a
         // buffer
-        Method (FWR, One, NotSerialized) {
+        Method (FWRD, One, NotSerialized) {
             // Byte length
             Local0 = Arg0
 
@@ -69,7 +69,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // 0x0 = FW_CFG_SIGNATURE
             CTRL = Zero
 
-            Local0 = ToString(FWR(4))
+            Local0 = ToString(FWRD(4))
 
             If ("QEMU" != Local0) {
                 Debug = "Missing fw_cfg signature"
@@ -79,17 +79,34 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             Return (Zero)
         }
 
+        // uint16 byte (endianness) swap
+        Method (BS16, One, NotSerialized) {
+            // Input Word buffer
+            Local0 = Arg0
+
+            Return ((Local0 << 8) | (Local0 >> 8))
+        }
+
+        // uint32 byte (endianness) swap
+        Method (BS32, One, NotSerialized) {
+            // Input DWord buffer
+            Local0 = Arg0
+
+            Local1 = Local0 << 8 & 0xFF00FF00 | Local0 >> 8 & 0x00FF00FF
+
+            Return ((Local1 << 16) | (Local1 >> 16))
+        }
+
         // Loads the fw_cfg file directory
         Method (FDIR, Zero, NotSerialized) {
             // 0x19 = FW_CFG_FILE_DIR
             CTRL = 0x19
 
             // First four bytes of FW_CFG_FILE_DIR, containing the entry count
-            Local0 = FWR(4)
+            Local0 = FWRD(4)
 
-            // Number of fw_cfg files (XXX: Is this conversioni correct?)
-            // FIXME: Conversion is probably wrong, length value is big endian
-            Local1 = Local0 >> 24
+            // Number of fw_cfg files
+            Local1 = BS32(Local0)
 
             // Total byte count to read (One fw_cfg file = 64 bytes)
             Local2 = Local1 * 64
@@ -109,7 +126,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             FCNT = Local0
 
             // Copy the file list in
-            FLST = FWR(Local2)
+            FLST = FWRD(Local2)
 
             Return (Local3)
         }
@@ -120,12 +137,10 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // FW_CFG_FILE_DIR
             Local0 = Arg0
 
-            // File count (as DWord buffer)
+            // File count (as DWord buffer, big-endian)
             CreateDWordField(Local0, 0, FCNT)
 
-            // FIXME: FCNT is big endian, how do we convert it properly? This
-            // shift is probably wrong
-            Return (FCNT >> 24)
+            Return (BS32 (FCNT))
         }
 
         // Returns the file list field from the provided FW_CFG_FILE_DIR struct,
@@ -178,9 +193,6 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // File list
             Local3 = GFL(Local0, Local2)
 
-            Debug = "Target:"
-            Debug = Local1
-
             For (Local4 = 0, Local4 < Local2, Local4++) {
                 // Current file
                 Local5 = FILG(Local3, Local4);
@@ -188,42 +200,38 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
                 // Current file name
                 Local6 = GFN(Local5)
 
-                Debug = "GFN result:"
-                Debug = Local6
-
                 If (Local6 == Local1) {
-                    Debug = "FOUND TARGET FILE,"
-
-                    // Selector field of current file
-                    CreateField(Local5, 32, 16, FSEL)
-
-                    // XXX: Selector is big endian
-                    Debug = "FSEL"
-                    Debug = FSEL
-
-                    Return (FSEL)
+                    Return (Local5)
                 }
             }
 
-            Return (Zero)
+            Return (Buffer(Zero) {})
         }
 
-
-        // Read the fw_cfg file identified by the given selector and return its
-        // contents as a buffer
-        Method (FRD, One, NotSerialized) {
+        // Reads the given fw_cfg_file and returns a buffer of its contents
+        Method (FWLD, One, NotSerialized) {
             // Selector for fw_cfg file to load
             Local0 = Arg0
 
-            // TODO
+            // File size as a big-endian dword
+            CreateDWordField(Local0, 0, SIZE)
+            // Selector
+            CreateWordField(Local0, 4, FSEL)
 
-            Return (Buffer(Zero) {})
+            // File size as int
+            Local1 = BS32(SIZE)
+            // Selector address
+            Local2 = BS16(FSEL)
+
+            // Set the ctrl register to our selector
+            CTRL = Local2
+
+            Return (FWRD (Local1))
         }
 
         // Retrieves the VBIOS from qemu fw_cfg space.
         Method (ROMG, Zero, NotSerialized) {
             If (ROML == One) {
-                // Debug = "ROMG Already Run!"
                 Return ()
             }
 
@@ -240,21 +248,15 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
                 Return ()
             }
 
-            // Our target file's selector
+            // Our target file
             Local1 = FWGS(Local0, "genroms/10de:139b:4136:1764")
 
-            Debug = "FWGS"
-            Debug = Local1
-
-            If (Local1 == Zero) {
+            If (SizeOf(Local1) == Zero) {
                 Debug = "Could not find target fw_cfg file"
                 Return ()
             }
 
-            ROMB = FRD(Local1)
-
-            Debug = "ROMB"
-            Debug = ROMB
+            ROMB = FWLD(Local1)
 
             ROML = One
         }
@@ -264,12 +266,6 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
         Method (_ROM, 2, NotSerialized) {
             // Load the VBIOS into memory, if needed
             ROMG()
-
-            // XXX: Removeme
-            ROML = One
-
-            // Bail early for now
-            Return (Buffer (Arg1) {})
 
             // Offset in bytes
             Local0 = Arg0
@@ -281,10 +277,9 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
                 Local1 = 0x1000
             }
 
-            // FIXME: 128k is just based on our ROM. Use the size from the
-            // fw_cfg file
-            // Bail if offset > 128k
-            If ((Local0 > 0x20000)) {
+            // Bail if offset > our ROM size
+            // FIXME: Should account for length here
+            If (Local0 > SizeOf(ROMB)) {
                 Return (Buffer (Local1) {})
             }
 
