@@ -13,7 +13,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
         Name (ROML, Zero)
 
         // Buffer to hold ROM data read from fw_cfg
-        Name (ROMB, Buffer(Zero) {})
+        Name (ROMB, Buffer(0x20000) { })
 
         CreateByteField(\_SB.PCI0.FWCF._CRS, 0, ID)
         CreateWordField(\_SB.PCI0.FWCF._CRS, 2, BMIN)
@@ -205,7 +205,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
                 }
             }
 
-            Return (Buffer(Zero) {})
+            Return (Buffer() { 0 })
         }
 
         // Reads the given fw_cfg_file and returns a buffer of its contents
@@ -251,7 +251,7 @@ DefinitionBlock ("", "SSDT", 1, "JSC", "NVHACK", 0x00000002) {
             // Our target file
             Local1 = FWGS(Local0, "genroms/10de:139b:4136:1764")
 
-            If (SizeOf(Local1) == Zero) {
+            If (SizeOf(Local1) == One) {
                 Debug = "Could not find target fw_cfg file"
                 Return ()
             }
